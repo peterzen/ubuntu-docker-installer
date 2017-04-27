@@ -1,6 +1,10 @@
 #/bin/bash
 
-export DEBIAN_FRONTEND=noninteractive
+sudo apt-get update && \
+sudo apt-get -qy install \
+      apt-transport-https \		      
+      ca-certificates \
+      curl
 
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -	
 
