@@ -2,14 +2,6 @@
 
 export DEBIAN_FRONTEND=noninteractive
 
-sudo apt-get update && sudo apt-get -qy upgrade
-
-sudo apt-get -qy install \
-    apt-transport-https \
-    ca-certificates \
-    curl \
-    software-properties-common
-	
 curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -	
 
 sudo add-apt-repository \
@@ -17,7 +9,13 @@ sudo add-apt-repository \
    $(lsb_release -cs) \
    stable"
    
-sudo apt-get update && sudo apt-get -qy install docker-ce
+sudo apt-get update && \
+sudo apt-get -qy install \
+    apt-transport-https \
+    ca-certificates \
+    curl \
+    software-properties-common \
+    docker-ce
 
 echo
 echo * Docker install completed
