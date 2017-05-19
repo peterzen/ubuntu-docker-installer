@@ -1,4 +1,4 @@
-#/bin/bash
+#!/bin/bash
 
 sudo apt-get update && \
 sudo apt-get -qy install apt-transport-https software-properties-common ca-certificates curl
@@ -19,7 +19,7 @@ sudo apt-get -qy install \
     docker-ce
 
 echo
-echo * Docker install completed
+echo Docker install completed
 echo
 
 
